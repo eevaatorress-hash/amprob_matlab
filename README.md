@@ -1,4 +1,4 @@
-# amprob_matlab
+# Repositorio para Ampliación de robótica
 Prácticas de Ampliación de robótica en matlab.
 
 ## Práctica 4
