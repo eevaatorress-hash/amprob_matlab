@@ -10,5 +10,5 @@ Desarrollo de módulo de planificación de caminos utilizando el algortimo Dijks
 Esta práctica se ve comprendida en el archivo `dijkstra.m`.
 
 ## Práctica 6
-Desarrollo del módulo de planificación de caminos utilizando el algoritmo A*. A la práctica anterior se le añadirá como parámetro una Heurística que reducirá el coste computacional del algoritmo al evitar explorar secciones no necesarias.
+Desarrollo del módulo de planificación de caminos utilizando el algoritmo A*. A la práctica anterior se le añadirá como parámetro una Heurística (H) que reducirá el coste computacional del algoritmo al evitar explorar secciones no necesarias.
 Esta práctica se ve comprendida en el archivo `aestrella.m`.
