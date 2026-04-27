@@ -12,3 +12,7 @@ Esta práctica se ve comprendida en el archivo `dijkstra.m`.
 ## Práctica 6
 Desarrollo del módulo de planificación de caminos utilizando el algoritmo A*. A la práctica anterior se le añadirá como parámetro una Heurística (H) que reducirá el coste computacional del algoritmo al evitar explorar secciones no necesarias.
 Esta práctica se ve comprendida en el archivo `aestrella.m`.
+
+## Práctica 7
+Uso del conjunto de prácticas anteriores para conseguir una navegación totalmente autónoma a partir de nodos de origen y destino. 
+Esta práctica se ve comprendida en los archivos `practica7_dijkstra.m` y `practica7_aestrella.m`.
