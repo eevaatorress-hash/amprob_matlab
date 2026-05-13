@@ -62,18 +62,21 @@ heu(idx) = dist_heu;
 Frep_sum = [0,0];
 
 [coste,ruta] = aestrella(nuevos_costes,heu,nodo_origen, nodo_destino);
+
+origen = nodos(nodo_origen,2:3);
+robot=[origen 0];     % El robot empieza en la posición de origen (orientacion cero)
+
 for j= 1:length(ruta)-1
     nodo_origen = ruta(j);
     nodo_destino = ruta(j+1);
     origen = nodos(nodo_origen,2:3);
     destino = nodos(nodo_destino,2:3);
 
-    robot=[origen 0];     % El robot empieza en la posición de origen (orientacion cero)
-    path = [];                 % Se almacena el camino recorrido
-    path = [path; robot]; % Se añade al camino la posicion actual del robot
-    iteracion=0;              % Se controla el nº de iteraciones por si se entra en un minimo local
+    path = [];                  % Se almacena el camino recorrido
+    path = [path; robot];       % Se añade al camino la posicion actual del robot
+    iteracion=0;                % Se controla el nº de iteraciones por si se entra en un minimo local
 
-    while norm(destino-robot(1:2)) > 1.75 && iteracion<1000    % Hasta menos de una iteración de la meta (10 cm)
+    while norm(destino-robot(1:2)) > 1.0 && iteracion<1000    % Hasta menos de una iteración de la meta (10 cm)
         if iteracion <= 10
             dif_dist = 5; %valor random mientras no es relevante
             pos_ant(iteracion+1,:) = robot(1:2); % guardamos las primeras 10 posiciones
@@ -118,10 +121,9 @@ for j= 1:length(ruta)-1
         if iteracion==1000   % Se ha caído en un mínimo local
             fprintf('No se ha podido llegar del %d al %d\n', nodo_origen, nodo_destino)
             meta = false;
+            origen = nodos(nodo_destino,2:3);
+            robot=[origen 0];
         end
-        % elseif iteracion==500  
-        %     beta=50;
-        % end
     end
 end
 

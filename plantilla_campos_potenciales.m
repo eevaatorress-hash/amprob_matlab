@@ -27,9 +27,9 @@ angulos=-pi/2:(pi/180):pi/2; % resolucion angular barrido laser
 
 % Caracteristicas del vehiculo y parametros del metodo
 v=0.4;            % Velocidad del robot
-D=20;           % Rango del efecto del campo de repulsión de los obstáculos
+D=5;           % Rango del efecto del campo de repulsión de los obstáculos
 alfa=1;           % Coeficiente de la componente de atracción
-beta=200;      % Coeficiente de la componente de repulsión
+beta=1000;      % Coeficiente de la componente de repulsión
 
 %% Inicialización
 
@@ -45,9 +45,9 @@ alto = size(map_bin,1);
 y = alto - y + 1;
 %% Calculo de la trayectoria
 Frep_sum = [0,0];
-while norm(destino-robot(1:2)) > v && iteracion<1000    % Hasta menos de una iteración de la meta (10 cm)
+while norm(destino-robot(1:2)) > 1 && iteracion<1000    % Hasta menos de una iteración de la meta (10 cm)
    % TU CODIGO AQUI %%%%%%%%%%%%%
-   
+
     % Calculamos fuerzas de atraccion
     Fatr = alfa*(destino - robot(1:2));
 
