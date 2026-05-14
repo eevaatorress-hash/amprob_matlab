@@ -7,7 +7,8 @@ Esta práctica se ve comprendida en el archivo `plantilla_campos_potenciales.m`.
 
 ## Práctica 5
 Desarrollo de módulo de planificación de caminos utilizando el algortimo Dijkstra. El cual recibe como parámetros la tabla de adyacencias de los nodos (G), el nodo de origen y el de destino.
-Esta práctica se ve comprendida en el archivo `dijkstra.m`.
+Esta práctica se ve comprendida en el archivo `dijkstra.m`. 
+Sin embargo, es de suma importancia cargar el archivo `grafos.mat` antes de realizar cualquier prueba, puesto que este archivo contiene las tablas de adyacencias necesarias para el computo de este algoritmo. Además, será necesario para la práctica 6.
 
 ## Práctica 6
 Desarrollo del módulo de planificación de caminos utilizando el algoritmo A*. A la práctica anterior se le añadirá como parámetro una Heurística (H) que reducirá el coste computacional del algoritmo al evitar explorar secciones no necesarias.
